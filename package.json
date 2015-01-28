@@ -2,9 +2,11 @@
   "name": "sanitize",
   "version": "0.0.1",
   "description": "Sanitize module to generate clean string and formating number",
+  "author": "Rodrigo Fuenzalida (rf@finciero.com) http://www.finciero.com/",
   "main": "index.js",
   "scripts": {
-    "test": "make test"
+    "test": "make test",
+    "start": "node index.js"
   },
   "keywords": [
     "sanitize",
@@ -12,11 +14,11 @@
     "string",
     "number"
   ],
-  "author": "Rodrigo Fuenzalida",
-  "license": "MIT",
-  "dependencies": {
-    "mocha": "~2.1.0"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rodrwan/sanitize.git"
   },
+  "license": "MIT",
   "devDependencies": {
     "mocha": "~2.1.0"
   }
