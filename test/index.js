@@ -37,20 +37,28 @@ describe('Sanitize', function(){
       assert.equal('Compra normal en comercio', san.getValue());
     });
   });
-  describe('#clanNumber', function(){
+  describe('#floatNumber', function(){
     var num = '10.000,20';
-    it('should return 10000.2 when use cleanNumber() on ' + num, function(){
+    it('should return 10000.2 when use floatNumber() on ' + num, function(){
       var san = new Sanitize(num);
-      san.cleanNumber();
+      san.floatNumber();
       assert.equal(10000.2, san.getValue());
     });
   });
-  describe('#clanNumber2', function() {
+  describe('#floatNumber2', function() {
     var num = '10,000.20';
-    it('should return 10000.2 when use cleanNumber2() on ' + num, function(){
+    it('should return 10000.2 when use floatNumber2() on ' + num, function(){
       var san = new Sanitize(num);
-      san.cleanNumber2();
+      san.floatNumber2();
       assert.equal(10000.2, san.getValue());
+    });
+  });
+  describe('#onlyNumber', function(){
+    var num = '10.000.000';
+    it('should return 10000000 when use onlyNumber() on ' + num, function(){
+      var san = new Sanitize(num);
+      san.onlyNumber();
+      assert.equal(10000000, san.getValue());
     });
   });
 });

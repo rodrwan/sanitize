@@ -1,4 +1,3 @@
-
 'use strict';
 
 function Sanitize (value) {
@@ -18,16 +17,22 @@ Sanitize.prototype.cleanString = function () {
   this.setValue(value.replace(/[^\wáéíóú]/g, ' ').replace(/(\s{2,})/g, ' ').trim());
 };
 
-Sanitize.prototype.cleanNumber = function () {
+Sanitize.prototype.floatNumber = function () {
   // i.e: $ 10.000,20
   var value = this.getValue();
   this.setValue(parseFloat(value.replace(/[\.\$\s]/g, '').replace(/,/, '.')));
 };
 
-Sanitize.prototype.cleanNumber2 = function () {
+Sanitize.prototype.floatNumber2 = function () {
   // i.e: $ 10,000.20
   var value = this.getValue();
   this.setValue(parseFloat(value.replace(/[\,\$\s]/g, '')));
+};
+
+Sanitize.prototype.onlyNumber = function () {
+  // i.e: $ 10.000 -> 10000
+  var value = this.getValue();
+  this.setValue(parseFloat(value.replace(/[^\d]/g, '')));
 };
 
 Sanitize.prototype.Capitalize = function () {
