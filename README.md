@@ -1,6 +1,11 @@
 Sanitize module
 ---------------
 
+## Install
+```sh
+$ npm install sanitize --save
+```
+
 <a name="module_sanitize"></a>
 # sanitize
 Useful functions to clean strings and numbers.
