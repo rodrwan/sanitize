@@ -1,6 +1,6 @@
 'use strict';
 var assert = require('assert'); // node.js core module
-var Sanitize = require('../index');
+var Sanitize = require('../sanitize');
 
 describe('Sanitize', function(){
   describe('#clanString', function(){

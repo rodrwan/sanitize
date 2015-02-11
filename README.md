@@ -1,26 +1,21 @@
 Sanitize module
 ---------------
 
-# Globals
-<dl>
-<dt><a href="#cleanString">cleanString(str)</a> ⇒ <code>String</code></dt>
-<dd><p>Delete extra space from text</p>
-</dd>
-<dt><a href="#formatNumberInt">formatNumberInt(number)</a> ⇒ <code>Float</code></dt>
-<dd><p>Format String of number and transform it into Float</p>
-</dd>
-<dt><a href="#formatNumberInt2">formatNumberInt2(number)</a> ⇒ <code>Float</code></dt>
-<dd><p>Format String of number and transform it into Float</p>
-</dd>
-<dt><a href="#capitalize">capitalize(str)</a> ⇒ <code>String</code></dt>
-<dd><p>Capitalize a word</p>
-</dd>
-<dt><a href="#phraseCapitalize">phraseCapitalize(phrase)</a> ⇒ <code>String</code></dt>
-<dd><p>Capitalize a whole text</p>
-</dd>
-</dl>
-<a name="cleanString"></a>
-# cleanString(str) ⇒ <code>String</code>
+<a name="module_sanitize"></a>
+# sanitize
+Useful functions to clean strings and numbers.
+
+
+* [sanitize](#module_sanitize)
+  * [.cleanString(str)](#module_sanitize.cleanString) ⇒ <code>String</code>
+  * [.formatNumberNat(number)](#module_sanitize.formatNumberNat) ⇒ <code>Integer</code>
+  * [.formatNumberInt(number)](#module_sanitize.formatNumberInt) ⇒ <code>Float</code>
+  * [.formatNumberInt2(number)](#module_sanitize.formatNumberInt2) ⇒ <code>Float</code>
+  * [.capitalize(str)](#module_sanitize.capitalize) ⇒ <code>String</code>
+  * [.phraseCapitalize(phrase)](#module_sanitize.phraseCapitalize) ⇒ <code>String</code>
+
+<a name="module_sanitize.cleanString"></a>
+## Sanitize.cleanString(str) ⇒ <code>String</code>
 Delete extra space from text
 
 **Returns**: <code>String</code> - cleaned string  
@@ -38,8 +33,33 @@ Delete extra space from text
   </tbody>
 </table>
 
-<a name="formatNumberInt"></a>
-# formatNumberInt(number) ⇒ <code>Float</code>
+<a name="module_sanitize.formatNumberNat"></a>
+## Sanitize.formatNumberNat(number) ⇒ <code>Integer</code>
+Format String of number and transform it into Integer
+
+**Returns**: <code>Integer</code> - String only with number returned as Integer  
+
+<table>
+  <thead>
+    <tr>
+      <th>Param</th><th>Type</th><th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+    <td>number</td><td><code>String</code></td><td>String of a number with random characters</td>
+    </tr>
+  </tbody>
+</table>
+
+**Example**  
+```js
+> var number = '10.000'
+> formatNumberNat(number)
+10000
+```
+<a name="module_sanitize.formatNumberInt"></a>
+## Sanitize.formatNumberInt(number) ⇒ <code>Float</code>
 Format String of number and transform it into Float
 
 **Returns**: <code>Float</code> - String only with number returned as Float  
@@ -63,8 +83,8 @@ Format String of number and transform it into Float
 > formatNumberInt(number)
 10000.1
 ```
-<a name="formatNumberInt2"></a>
-# formatNumberInt2(number) ⇒ <code>Float</code>
+<a name="module_sanitize.formatNumberInt2"></a>
+## Sanitize.formatNumberInt2(number) ⇒ <code>Float</code>
 Format String of number and transform it into Float
 
 **Returns**: <code>Float</code> - String only with number returned as Float  
@@ -88,8 +108,8 @@ Format String of number and transform it into Float
 > formatNumberInt(number)
 10000.1
 ```
-<a name="capitalize"></a>
-# capitalize(str) ⇒ <code>String</code>
+<a name="module_sanitize.capitalize"></a>
+## Sanitize.capitalize(str) ⇒ <code>String</code>
 Capitalize a word
 
 **Returns**: <code>String</code> - Capitalized string  
@@ -107,8 +127,8 @@ Capitalize a word
   </tbody>
 </table>
 
-<a name="phraseCapitalize"></a>
-# phraseCapitalize(phrase) ⇒ <code>String</code>
+<a name="module_sanitize.phraseCapitalize"></a>
+## Sanitize.phraseCapitalize(phrase) ⇒ <code>String</code>
 Capitalize a whole text
 
 **Returns**: <code>String</code> - Capitalized text  
