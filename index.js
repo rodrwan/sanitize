@@ -14,9 +14,10 @@ var cleanString =  function (str) {
  * @param  {String} number String of a number with random characters
  * @return {Integer}       String only with number returned as Integer
  * @example
- > var number = '10.000'
- > formatNumberNat(number)
- 10000
+> var number = '10.000'
+> formatNumberNat(number)
+10000
+ * @alias module:sanitize.formatNumberNat
  */
 var formatNumberNat = function (number) {
   if (typeof number !== 'string') throw new Error('formatNumberNat() input must be a string');
@@ -27,9 +28,9 @@ var formatNumberNat = function (number) {
  * @param  {String} number String of a number with random characters
  * @return {Float}         String only with number returned as Float
  * @example
- > var number = '10.000,10'
- > formatNumberInt(number)
- 10000.1
+> var number = '10.000,10'
+> formatNumberInt(number)
+10000.1
  */
 var formatNumberInt = function (number) {
   if (typeof number !== 'string') throw new Error('formatNumberInt() input must be a string');
@@ -40,9 +41,9 @@ var formatNumberInt = function (number) {
  * @param  {String} number String of a number with random characters
  * @return {Float}         String only with number returned as Float
  * @example
- > var number = '10,000.10'
- > formatNumberInt(number)
- 10000.1
+> var number = '10,000.10'
+> formatNumberInt(number)
+10000.1
  */
 var formatNumberInt2 = function (number) {
   if (typeof number !== 'string') throw new Error('formatNumberInt2() input must be a string');

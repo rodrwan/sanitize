@@ -7,7 +7,7 @@
   "scripts": {
     "test": "make test",
     "start": "node index.js",
-    "docs": "jsdoc2md index.js > README.md"
+    "docs": "jsdoc2md -t jsdoc2md/README.hbs -l js -d 1 --no-gfm index.js > README.md"
   },
   "keywords": [
     "sanitize",
